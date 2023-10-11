@@ -244,7 +244,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                name="granh"
+                name="granp"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
