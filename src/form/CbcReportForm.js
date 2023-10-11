@@ -17,6 +17,7 @@ const CbcReportForm =() =>{
     
     const formDataString = JSON.stringify(formData);
     console.log(formDataString);
+    localStorage.removeItem('data');
     localStorage.setItem('data', formDataString);
 
       navigate("/report");
@@ -25,7 +26,7 @@ const CbcReportForm =() =>{
 
   return (
     <div className="flex justify-center">
-      <div className="container w-3/5 mt-8 p-6">
+      <div className="container w-full md:w-3/5 md:mt-8 p-6">
         <form
           className="bg-white p-8 rounded shadow-lg"
           onSubmit={handleSubmit}
@@ -37,21 +38,7 @@ const CbcReportForm =() =>{
             </label>
             <input
               type="text"
-              id="name"
               name="name"
-              onChange={handleInputChange}
-              className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label  className="block text-gray-600 font-medium">
-              Date
-            </label>
-            <input
-              type="date"
-              id="date"
-              name="date"
               onChange={handleInputChange}
               className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
               required
@@ -63,7 +50,6 @@ const CbcReportForm =() =>{
             </label>
             <input
               type="number"
-              id="age"
               name="age"
               onChange={handleInputChange}
               className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
@@ -76,11 +62,21 @@ const CbcReportForm =() =>{
             </label>
             <input
               type="text"
-              id="sex"
               name="sex"
               onChange={handleInputChange}
               className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
               required
+            />
+          </div>
+          <div className="mb-4">
+            <label  className="block text-gray-600 font-medium">
+              Date
+            </label>
+            <input
+              type="date"
+              name="date"
+              onChange={handleInputChange}
+              className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
             />
           </div>
           <div className="mb-4">
@@ -89,11 +85,9 @@ const CbcReportForm =() =>{
             </label>
             <input
               type="text"
-              id="ref"
               name="ref"
               onChange={handleInputChange}
               className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-              required
             />
           </div>
           <div className="flex">
@@ -103,35 +97,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="WBC"
-                className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
-              />
-            </div>
-            <div className="w-1/2 pl-2">
-              <label  className="block text-gray-600 font-medium">
-                Result
-              </label>
-              <input
-                type="text"
-                id="input2"
-                name="WBCR"
-                className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
-              />
-            </div>
-          </div>
-          <div className="flex">
-            <div className="w-1/2 pr-2">
-              <label  className="block text-gray-600 font-medium">
-                WBC
-              </label>
-              <input
-                type="text"
-                id="input1"
                 name="wbc"
-                onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
               />
@@ -142,11 +108,8 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
                 name="wbcr"
-                onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -157,11 +120,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
                 name="lymphp"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
             <div className="w-1/2 pl-2">
@@ -170,11 +131,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="LYMPHpr"
+                name="lymphpr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -185,8 +144,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="MIDp"
+                name="midp"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -198,11 +156,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="MIDpr"
+                name="midpr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -213,8 +169,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="GRANp"
+                name="grandp"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -226,11 +181,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="GRANpr"
+                name="grandpr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -241,8 +194,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="LPH"
+                name="lph"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -254,11 +206,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="LPHr"
+                name="lphr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -269,8 +219,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="MIDh"
+                name="midh"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -282,11 +231,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="MIDhr"
+                name="midhr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -297,8 +244,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="GRANh"
+                name="granh"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -310,11 +256,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="GRANhr"
+                name="granpr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -325,8 +269,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="HGB"
+                name="hgb"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -338,11 +281,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="HGBr"
+                name="hgbr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -353,8 +294,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="RBC"
+                name="rbc"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -366,11 +306,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="RBCr"
+                name="rbcr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -381,8 +319,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="HCT"
+                name="htc"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -394,11 +331,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="HCTr"
+                name="hctr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -409,8 +344,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="MCV"
+                name="mcv"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -422,11 +356,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="MCVr"
+                name="mcvr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -437,8 +369,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="MCH"
+                name="mch"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -450,11 +381,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="MCHr"
+                name="mchr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -465,8 +394,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="MCHC"
+                name="mchc"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -478,11 +406,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="MCHCr"
+                name="mchcr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -493,8 +419,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="RDW-CV"
+                name="rdwcv"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -506,11 +431,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="RDW-CVr"
+                name="rdwcvr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -521,8 +444,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="RDW-SD"
+                name="rdwsd"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -534,11 +456,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="RDW-SDr"
+                name="rdwsdr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -549,8 +469,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="PLT"
+                name="plt"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -562,11 +481,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="PLTr"
+                name="pltr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -577,8 +494,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="MPV"
+                name="mpv"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -590,11 +506,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="input2"
+                name="mpvr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -605,8 +519,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="PDW"
+                name="pdw"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -618,11 +531,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="input2"
+                id="pdwr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
@@ -633,8 +544,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input1"
-                name="PCT"
+                name="pct"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -646,11 +556,9 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="input2"
-                name="input2"
+                name="pctr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
               />
             </div>
           </div>
