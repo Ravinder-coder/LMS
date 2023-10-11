@@ -88,7 +88,7 @@ const CbcReport = () => {
           <td>
           X10<sup>9/</sup>
           </td>
-          <td className="upperCase">{retrievedFormData.granhr}</td>
+          <td className="upperCase">{retrievedFormData.granh}</td>
           <td>2.0 - 7.8</td>
         </tr>
         <tr>
@@ -111,11 +111,11 @@ const CbcReport = () => {
         </tr>
         <tr>
           <td>HCT</td>
-          <td>{retrievedFormData.htc}</td>
+          <td>{retrievedFormData.hct}</td>
           <td>
             %
           </td>
-          <td className="upperCase">{retrievedFormData.htcr}</td>
+          <td className="upperCase">{retrievedFormData.hctr}</td>
           <td>36.0 - 48.0</td>
         </tr>
         <tr>

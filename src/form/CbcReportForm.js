@@ -20,7 +20,7 @@ const CbcReportForm =() =>{
     localStorage.removeItem('data');
     localStorage.setItem('data', formDataString);
 
-      navigate("/report");
+    navigate("/report");
   };
 
 
@@ -98,6 +98,7 @@ const CbcReportForm =() =>{
               <input
                 type="text"
                 name="wbc"
+                onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
               />
@@ -109,6 +110,7 @@ const CbcReportForm =() =>{
               <input
                 type="text"
                 name="wbcr"
+                onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
               />
             </div>
@@ -123,6 +125,7 @@ const CbcReportForm =() =>{
                 name="lymphp"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
+                required
               />
             </div>
             <div className="w-1/2 pl-2">
@@ -169,7 +172,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                name="grandp"
+                name="granp"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -181,7 +184,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                name="grandpr"
+                name="granpr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
               />
@@ -244,7 +247,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                name="granp"
+                name="granh"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -256,7 +259,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                name="granpr"
+                name="granhr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
               />
@@ -319,7 +322,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                name="htc"
+                name="hct"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
                 required
@@ -447,7 +450,7 @@ const CbcReportForm =() =>{
                 name="rdwsd"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
-                required
+                
               />
             </div>
             <div className="w-1/2 pl-2">
@@ -531,7 +534,7 @@ const CbcReportForm =() =>{
               </label>
               <input
                 type="text"
-                id="pdwr"
+                name="pdwr"
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
               />
